@@ -3,16 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPositions : MonoBehaviour
+public class CheckBottle : MonoBehaviour
 {
-    public static bool test;
-
+    public static bool bottle;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("bottle"))
         {
-            test = true;
+          bottle = true;
 
         }
     }

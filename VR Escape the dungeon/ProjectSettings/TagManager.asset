@@ -10,6 +10,10 @@ TagManager:
   - CubeGreen
   - book
   - bottle
+  - sword
+  - plate
+  - fork
+  - knife
   layers:
   - Default
   - TransparentFX

@@ -5,15 +5,15 @@ using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CheckCollision : MonoBehaviour
+public class CheckBook : MonoBehaviour
 {
-    public static bool kold;
+    public static bool book;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("book"))
         {
-            kold = true;
+            book = true;
         }
     }
 }
