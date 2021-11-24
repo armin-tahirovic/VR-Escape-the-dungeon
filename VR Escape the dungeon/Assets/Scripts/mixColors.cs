@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class mixColors : MonoBehaviour
 {
@@ -10,6 +13,7 @@ public class mixColors : MonoBehaviour
   public GameObject colorCube2;
   public GameObject colorCube3;
   public GameObject whiteCube;
+  public GameObject menu;
 
   void Start()
   {
@@ -21,6 +25,7 @@ public class mixColors : MonoBehaviour
     colorCube2.material.color = Color.blue;
     colorCube3.material.color = Color.green;
     whiteCube.material.color = Color.white;
+    menu.SetActive(false);
   }
 
   void OnTriggerEnter(Collider other)
@@ -42,8 +47,13 @@ public class mixColors : MonoBehaviour
         r /= 2;
         g /= 2;
         b /= 2;
-        var mixedColor = new Color(r, g, b);
+        var mixedColor = new Color(r, g, b, 1);
         mainCubeMeshRend.material.color = mixedColor;
+
+        if (mainCubeMeshRend.material.color.r == 0.5f && mainCubeMeshRend.material.color.g == 0.5f && mainCubeMeshRend.material.color.b == 0)
+        {
+          menu.gameObject.SetActive(true);
+        }
       }
     }
 
@@ -61,8 +71,13 @@ public class mixColors : MonoBehaviour
         r /= 2;
         g /= 2;
         b /= 2;
-        var mixedColor = new Color(r, g, b);
+        var mixedColor = new Color(r, g, b, 1);
         mainCubeMeshRend.material.color = mixedColor;
+
+        if (mainCubeMeshRend.material.color.r == 0.5f && mainCubeMeshRend.material.color.g == 0.5f && mainCubeMeshRend.material.color.b == 0)
+        {
+          menu.gameObject.SetActive(true);
+        }
       }
     }
 
@@ -80,7 +95,7 @@ public class mixColors : MonoBehaviour
         r /= 2;
         g /= 2;
         b /= 2;
-        var mixedColor = new Color(r, g, b);
+        var mixedColor = new Color(r, g, b, 1);
         mainCubeMeshRend.material.color = mixedColor;
       }
     }

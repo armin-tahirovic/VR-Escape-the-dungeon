@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CubeRed
+  - CubeBlue
+  - CubeWhite
+  - CubeGreen
+  - book
+  - bottle
   layers:
   - Default
   - TransparentFX

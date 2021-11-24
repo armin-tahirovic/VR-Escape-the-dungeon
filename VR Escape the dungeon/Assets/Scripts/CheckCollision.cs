@@ -8,10 +8,6 @@ using UnityEngine.UI;
 public class CheckCollision : MonoBehaviour
 {
     public static bool kold;
-    public Text text;
-   
-
-
 
     private void OnTriggerEnter(Collider other)
     {

@@ -6,14 +6,14 @@ using UnityEngine;
 public class CheckPositions : MonoBehaviour
 {
     public static bool test;
-   
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("flask"))
+        if (other.gameObject.CompareTag("bottle"))
         {
             test = true;
-            
+
         }
     }
 }
